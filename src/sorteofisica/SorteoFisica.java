@@ -18,6 +18,7 @@ public class SorteoFisica {
         
         System.out.println("*******************");
 	System.out.println();
+	System.out.println("Este es un mensaje");
 
     }
     
