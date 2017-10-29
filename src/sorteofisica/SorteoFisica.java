@@ -17,9 +17,8 @@ public class SorteoFisica {
         obj.Ejercicios(cantidad, lis);
         
         System.out.println("*******************");
-        System.out.println("*******************");
-        
-        
+	System.out.println();
+
     }
     
 }
