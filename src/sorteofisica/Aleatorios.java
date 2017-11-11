@@ -7,19 +7,22 @@ import java.util.ArrayList;
  * @author steve
  */
 public class Aleatorios {
-    ArrayList<Integer> a = new ArrayList<Integer>();
+    ArrayList<Integer> a = null;
     private int c;
-    ArrayList<Integer> ejercicios = new ArrayList<>();
-        
-    public void PosAleatorio(){    
+    ArrayList<Integer> ejercicios = null;
+    
+    public ArrayList<Integer> PosAleatorio(){
+        a = new ArrayList<Integer>();
         for(int i=0;7>i;i++){
             c = (int) (Math.random()*7);
             while(a.indexOf(c)!=-1){c = (int) (Math.random()*7);}
             a.add(c);
         }
+        return a;
     }
     
-    public void Ejercicios(int cant){
+    public ArrayList<Integer> Ejercicios(int cant){
+        ejercicios = new ArrayList<>();
         //Cantidad de ejercicios
         int  ejer, sort = cant; 
         while (cant >0){
@@ -30,11 +33,12 @@ public class Aleatorios {
                 cant--;
             }
         }
+        return ejercicios;
     }
  
-    public void Ejercicios(int cantidad, String lis[]){
+    public void Ejercicios(int cantidad, String lis[],ArrayList<Integer> ejercicios ,ArrayList<Integer> a ){
         int  pos = 0;
-        System.out.println(ejercicios);
+        //System.out.println(ejercicios);
         for(Integer i:a){
             if (cantidad <3){
                 System.out.print("\nA "+lis[i]+" le toca: "+ejercicios.get(pos));
